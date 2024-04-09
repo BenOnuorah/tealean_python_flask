@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% block title %}Add Student{% endblock title %}
+<h2>
+{% block subheading %}Add Student{% endblock subheading %}</h2>
+{% block content %}
+  
+{% if msg %}
+  <p><b>{{ msg }}</b></p>
+{% endif %}
+    <form method="POST" action ="/addstudent">
+      Surname: <br/>
+      <input type="text" name="surname" />
+      <br/>
+      
+      Other names: <br/>
+      <input type="text" name="othernames" />
+      <br/>
+      
+      Address: <br/>
+      <textarea name="address"></textarea>
+      
+      <br/>
+      <input type="submit" name="Save"/>
+  </form>
+
+{% endblock content %}
